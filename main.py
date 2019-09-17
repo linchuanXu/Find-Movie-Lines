@@ -4,6 +4,7 @@ import re
 import zipfile
 import requests
 
+#url = "https://assrt.net/xml/sub/461/461289.xml?suggest_from=603584"
 url = "https://assrt.net/xml/sub/610/610293.xml"
 
 
@@ -43,6 +44,7 @@ def unzip(adr):
         os.chdir("C:\\Users\\XU\\Desktop\\temp")
         return fileList
     else:
+        os.chdir("C:\\Users\\XU\\Desktop\\")
         return [adr,]
 
 def search(fileList,msg):
@@ -59,7 +61,6 @@ def search(fileList,msg):
             break
 
     return ans
-
 
 def write_down(ans):
     with open('ans.txt','w') as f:
